@@ -20,7 +20,7 @@ jobs:
     - name: Run E2E Codecept tests
       run: npx run npm test:ct
     - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
+      if: always()
       with:
         name: codecept-reports
         path: output/
